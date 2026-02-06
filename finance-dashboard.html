@@ -53,49 +53,43 @@
       <button id="menu" title="Menu button"></button>
     </header>
     <main>
-      <div class="grid-container">
-        <div class="left-sidebar">
-          <div class="sidebar-card">
-            <h2>Calendar</h2>
+      <div class="finance-dashboard-grid-container">
+        <div class="finance-dashboard-left-sidebar">
+          <div class="finance-dashboard-sidebar">
+            <h2>Report Options</h2>
             <ul>
-              <li><div class="peach-icon"></div>February 12: City Council Meeting</li>
-              <li><div class="peach-icon"></div>February 16:  Presidents' Day</li>
-              <li><div class="peach-icon"></div>February 26: City Council Meeting</li>
+              <li id="opt-dashboard"><div class="peach-icon"></div>Dashboard</li>
+              <li id="opt-summary"><div class="peach-icon"></div>Summary Cash Budgets</li>
+              <li id="opt-detail"><div class="peach-icon"></div>Detailed Cash Budgets</li>
             </ul>
           </div>
         </div>
-        <div class="hero">
-          <picture>
-            <source
-              srcset="images/home_hero_large.webp"
-              media="(min-width: 480px)"
-            />
+        <div class="finance-dashboard-section">
             <img
-              src="images/home_hero_large.webp"
-              alt="Hero image"
+              src="images/dashboard.png"
+              alt="Finance dashboard placeholder image"
               width="406"
               height="416"
+              class="dashboard-placeholder-image"
+              id="finance-dashboard-placeholder-image"
             />
-          </picture>
-          <div class="chatbox"><h2>Whatcha' looking for today?</h2>
-            <div id="chat-window" class="chat-window"></div>
-            <select name="questions" id="questions" required>
-                <option value="" id="questions-list-placeholder" disabled selected hidden>Choose a question ...
-                </option>
-            </select>
-            <button id="ask-button">↑</button>
-          </div>
+            <img
+              src="images/summary.png"
+              alt="Finance dashboard placeholder image"
+              width="406"
+              height="416"
+              class="dashboard-placeholder-image hidden"
+              id="finance-summary-placeholder-image"
+            />
+            <img
+              src="images/detail.png"
+              alt="Finance dashboard placeholder image"
+              width="406"
+              height="416"
+              class="dashboard-placeholder-image hidden"
+              id="finance-detail-placeholder-image"
+            />
         </div>
-        <div class="right-sidebar">
-          <div class="sidebar-card">
-            <h2>News</h2>
-            <ul>
-              <li><div class="peach-icon"></div>Perry City and America250</li>
-              <li><div class="peach-icon"></div>New Dispatch Partner</li>
-              <li><div class="peach-icon"></div>Wastewater News</li>
-            </ul>
-          </div>
-      </div>
     </main>
     <footer id="footer">
       <ul class="footer-nav-options">

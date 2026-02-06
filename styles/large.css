@@ -16,6 +16,10 @@
     list-style: none;
   }
 
+  .nav-options {
+    position: relative;
+  }
+
   .footer-nav-options li {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -27,7 +31,7 @@
     text-decoration: none;
   }
 
-  .nav-options a:hover {
+  /*.nav-options a:hover {
     text-decoration: underline;
     text-decoration-thickness: 5px;
     background-color: var(--byzantium);
@@ -40,6 +44,41 @@
     background-color: var(--mindaro);
     color: black;
     border: none;
+  } */
+
+  .nav-options > li {
+    position: relative;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    /* border: 0.5px solid black; */
+    font-size: smaller;
+    list-style: none;
+    min-width: 180px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+  }
+
+  .has-dropdown:hover .dropdown {
+    display: block;
+  }
+
+  .dropdown li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown li a:hover {
+    background-color: #f0f0f0;
+    font-weight: bold;
   }
 
   #sub-nav {
@@ -57,5 +96,50 @@
     grid-template-columns: 0.5fr 2fr 0.5fr;
     grid-column-gap: 0;
     grid-row-gap: 0;
+  }
+
+  .finance-dashboard-grid-container {
+    display: grid;
+    grid-template-areas: "finance-dashboard-left-sidebar finance-dashboard-section";
+    grid-template-columns: 200px auto;
+    column-gap: 1rem;
+    grid-row-gap: 0;
+    margin: 1.5rem 0 1.5rem 0;
+  }
+
+  .finance-dashboard-sidebar {
+    background-color: rgba(128, 143, 133, 0.25);
+    height: 100%;
+    padding: 0.5rem;
+  }
+
+  .finance-dashboard-sidebar h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .finance-dashboard-sidebar li {
+    cursor: pointer;
+    line-height: 1.5;
+  }
+
+  .finance-dashboard-sidebar li:hover {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+
+  .finance-dashboard-sidebar li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .dashboard-placeholder-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .hidden {
+    display: none;
   }
 }

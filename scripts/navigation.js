@@ -10,18 +10,20 @@ hambutton.addEventListener('click', () => {
 
 const selectElement = document.querySelector('#questions');
 
-data.forEach(entry => {
-    const optionElement = document.createElement('option');
-    optionElement.value = entry.id;
-    optionElement.textContent = entry.question;
-    selectElement.appendChild(optionElement);
-});
+if (selectElement) {
+    data.forEach(entry => {
+        const optionElement = document.createElement('option');
+        optionElement.value = entry.id;
+        optionElement.textContent = entry.question;
+        selectElement.appendChild(optionElement);
+    });
+}
 
 const askButton = document.querySelector('#ask-button');
 const chatWindow = document.querySelector('#chat-window');
 
 // Handle the Ask button click event
-askButton.addEventListener('click', () => {
+askButton?.addEventListener('click', () => {
     const selectedQuestionID = Number(selectElement.value);
     if (!selectedQuestionID) return;
     const entry = data.find(item => item.id === selectedQuestionID);
@@ -42,3 +44,23 @@ function addMessage(sender, message) {
     wrapper.appendChild(messageElement);
     chatWindow.appendChild(wrapper);
 }
+
+const dashboardImg = document.getElementById('finance-dashboard-placeholder-image');
+const summaryImg = document.getElementById('finance-summary-placeholder-image');
+const detailImg = document.getElementById('finance-detail-placeholder-image');
+
+const optDashboard = document.getElementById('opt-dashboard');
+const optSummary = document.getElementById('opt-summary');
+const optDetail = document.getElementById('opt-detail');
+
+function showOnly(img) {
+  dashboardImg?.classList.add('hidden');
+  summaryImg?.classList.add('hidden');
+  detailImg?.classList.add('hidden');
+
+  img?.classList.remove('hidden');
+}
+
+optDashboard?.addEventListener('click', () => showOnly(dashboardImg));
+optSummary?.addEventListener('click', () => showOnly(summaryImg));
+optDetail?.addEventListener('click', () => showOnly(detailImg));

@@ -105,16 +105,60 @@ nav {
   grid-template-columns: 1fr;
   grid-column-gap: 0;
   grid-row-gap: 0;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 .left-sidebar {
   grid-area: left-sidebar;
 }
 
+.sidebar-card {
+  border: 0.5px solid black;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: rgba(128, 143, 133, 0.25);
+  margin: 0 1rem;
+}
+
+.sidebar-card h2 {
+  text-align: center;
+}
+
+.sidebar-card ul, .finance-dashboard-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-card li {
+  padding: 0.25rem 0;
+  line-height: 1.5;
+}
+
+.sidebar-card li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.peach-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/peach-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+
 .hero {
   grid-area: hero;
   position: relative; /* enables absolute positioning of chatbox */
   min-height: 700px;
+}
+
+select {
+  width: 325px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chatbox {
