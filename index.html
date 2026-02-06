@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry City - Home</title>
+    <meta name="author" content="Blake Ostler" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <script src="scripts/navigation.js" type="module"></script>
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <div class="navigation">
+          <div class="image-text-container">
+            <a href="index.html"
+              ><img
+                src="images/logo_with_peach.webp"
+                alt="Perry City logo"
+                width="115"
+                height="115"
+                class="logo-image"
+            /></a>
+            <div class="nav-header-text">
+              <p id="nav-logo-title">Perry City, Utah</p>
+            </div>
+          </div>
+          <div id="sub-nav">
+            <ul class="nav-options">
+              <li>
+                <a href="#" id="quick-links-header-nav-link">Quick Links</a>
+              </li>
+              <li>
+                <a href="#" id="departments-header-nav-link">Departments</a>
+              </li>
+              <li><a href="#" id="about-header-nav-link">About</a></li>
+              <li><a href="#" id="contact-header-nav-link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <button id="menu" title="Menu button"></button>
+    </header>
+    <main>
+      <div class="grid-container">
+        <div class="left-sidebar">Calendar</div>
+        <div class="hero">
+          <picture>
+            <source
+              srcset="images/home_hero_large.webp"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="images/home_hero_large.webp"
+              alt="Hero image"
+              width="406"
+              height="416"
+            />
+          </picture>
+          <div class="chatbox"><h1>Whatcha' looking for today?</h1>
+            <div id="chat-window" class="chat-window"></div>
+            <select name="questions" id="questions" required>
+                <option value="" id="questions-list-placeholder" disabled selected hidden>Choose a question ...
+                </option>
+            </select>
+            <button id="ask-button">↑</button>
+          </div>
+        </div>
+        <div class="right-sidebar">News</div>
+      </div>
+    </main>
+    <footer id="footer">
+      <ul class="footer-nav-options">
+        <li><a href="#" id="departments-footer-nav-link">Departments</a></li>
+        <li><a href="#" id="about-footer-nav-link">About</a></li>
+        <li><a href="#" id="contact-footer-nav-link">Contact</a></li>
+      </ul>
+      <hr />
+      <p>&copy; B.O. Stinks Designs</p>
+    </footer>
+  </body>
+</html>
